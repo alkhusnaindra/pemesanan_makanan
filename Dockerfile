@@ -23,6 +23,11 @@ WORKDIR /var/www
 
 COPY . .
 
+RUN mkdir -p storage/framework/{cache,sessions,views} \
+    && mkdir -p bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
+
+
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Laravel permissions
