@@ -1,0 +1,6 @@
+node_modules
+storage
+.env
+tests
+.git
+!api/index.php

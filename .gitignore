@@ -40,3 +40,4 @@ composer.lock
 # Vagrant
 Homestead.json
 Homestead.yaml
+.vercel
