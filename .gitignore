@@ -1,0 +1,42 @@
+# Laravel cache
+/.phpunit.cache
+.phpunit.result.cache
+/storage/*.key
+/storage/app/*
+!/storage/app/public/
+!/storage/app/public/.gitignore
+/storage/framework/*
+!/storage/framework/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# Build files
+/public/build
+/public/hot
+
+# Ignore only certain parts of public, but ALLOW menu-images
+/public/storage
+!/public/menu-images/
+/public/*.php
+/public/index.php
+
+# Composer & env
+/vendor
+.env.backup
+.env.production
+auth.json
+composer.lock
+
+# IDE & Editor
+/.fleet
+/.idea
+/.vscode
+
+# Vagrant
+Homestead.json
+Homestead.yaml
