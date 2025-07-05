@@ -23,19 +23,17 @@ WORKDIR /var/www
 
 COPY . .
 
+# Create necessary directories & permissions
 RUN mkdir -p storage/framework/{cache,sessions,views} \
     && mkdir -p bootstrap/cache \
+    && chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
-
+# Install dependencies
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
-
-# Laravel permissions
-RUN chown -R www-data:www-data \
-    /var/www/storage \
-    /var/www/bootstrap/cache
 
 # Expose port
 EXPOSE 8000
 
+# Start Laravel server
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
