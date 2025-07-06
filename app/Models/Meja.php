@@ -22,7 +22,8 @@ class Meja extends Model
         
         static::creating(function ($meja) {
             // $qrCode = new QrCode(url('/meja-'.$meja->nomor_meja));
-            $qrCode = new QrCode('http://localhost:8000/meja-' . $meja->nomor_meja);
+           $qrCode = new QrCode(url('/meja-' . $meja->nomor_meja));
+
 
             $writer = new PngWriter();
         
