@@ -22,8 +22,8 @@ yarn-error.log
 # Ignore only certain parts of public, but ALLOW menu-images
 /public/storage
 !/public/menu-images/
-/public/*.php
-/public/index.php
+# /public/*.php
+# /public/index.php
 
 # Composer & env
 /vendor
